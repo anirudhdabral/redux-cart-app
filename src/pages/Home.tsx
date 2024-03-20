@@ -18,7 +18,7 @@ export const Home = (props: Props) => {
                             </div>
                             <div className="card-body">
                                 <h5 className="card-title">{product.name}</h5>
-                                <span>₹ {product.price}</span>
+                                <span>₹ {new Intl.NumberFormat('en-IN').format(product.price)}</span>
                                 <button
                                     onClick={
                                         () => props.addToCartHandler(product)
